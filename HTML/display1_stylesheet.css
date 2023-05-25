@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* body에서 상속되는 모든 태그에 기본 설정으로 마진과 패딩을 0으로 설정 */
+*{
+  margin: 0;
+  padding: 0;
+} 
+#wrapper{
+  border: 1px solid #888;
+  border-radius: 20px;
+  margin: 30px auto;
+  padding: 30px;
+  width: 400px;
+}
+p{
+  text-align: center;
+}
+p.login{
+  background-color: #03c75b;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+div.text{
+  text-align: center;
+}
+div.text > span{
+  border-right: 1px solid #222;
+  padding: 0 10px;
+  display: inline-block;
+}
+div.text > span:nth-child(3){
+  border-right: none;
+}
