@@ -101,7 +101,7 @@ main > section{
     transform: rotateY(180deg);
 }
 .viewon > .rotate{
-    transform: rotateX(deg);
+    transform: rotateX(180deg);
 }
 
 
