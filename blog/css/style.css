@@ -17,9 +17,12 @@ ul,li{
 
 /**reset*/
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
+    
     height: 500vh;
     min-width: 320px;
 }
@@ -37,9 +40,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0.3rem 1rem;
-    color: #fff;
+    color: #ff0101;
     background-color: rgb(106, 21, 21);
     z-index: 10;
+
 }
 .logo{
     cursor: pointer;
@@ -53,7 +57,7 @@ nav> .gnb{
 }
 nav> .gnb > li{
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     cursor: pointer;
 }
 header > .home{
@@ -241,6 +245,7 @@ section > .title > h2{
     border-radius: 3px;
     padding: 10px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .contact form input,
@@ -265,8 +270,28 @@ section > .title > h2{
     border: none;
     padding: 10px;
     font-size: 2rem;
+    border-radius: 20%;
 }
-
+/*메일 보내기 확인 후 팝업**/
+.contact .right .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+.thankyou_message p.close{
+    background-color: rgb(141, 131, 169);
+    border: none;
+    border-radius: 10%;
+    padding: 20px;
+    font-size: 2rem;
+}
 
 /* animation */
 @keyframes blink{
