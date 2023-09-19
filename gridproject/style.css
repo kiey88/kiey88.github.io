@@ -146,7 +146,7 @@ section.box1 > p:nth-child(6){
     grid-column: 2/2;
     grid-row: 2/4;
     background-image: url(image/gridbike/1-2-2.jpg);
-    background-size: 440px 420px;
+    background-size: 435px 420px;
     /* transform: scaleX(-1); */
 }
 section.box1 > p:nth-child(7){
