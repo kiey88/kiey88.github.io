@@ -98,10 +98,10 @@ main > section{
     opacity: 1;
 }
 .viewon>p{
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 .viewon > .rotate{
-    transform: rotateX(180deg);
+    transform: rotateX(360deg);
 }
 
 
@@ -146,7 +146,8 @@ section.box1 > p:nth-child(6){
     grid-column: 2/2;
     grid-row: 2/4;
     background-image: url(image/gridbike/1-2-2.jpg);
-    background-size: 345px 460px;
+    
+    background-size: cover
     
 }
 section.box1 > p:nth-child(7){
