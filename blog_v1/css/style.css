@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul,li{
+    list-style: none;
+}
+
+/**reset*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    
+    height: 500vh;
+    min-width: 320px;
+}
+html,button{
+    font-size: 10px;
+    font-family: 'Caveat', cursive;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    color: #ff0101;
+    background-color: rgb(106, 21, 21);
+    z-index: 10;
+
+}
+.logo{
+    cursor: pointer;
+    padding: 0;
+}
+.logoimg{
+    width: 75px;
+}
+nav> .gnb{
+    display: flex;
+}
+nav> .gnb > li{
+    padding: 10px;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+header > .home{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url(../img/e3f95371334d724dd486fb726fec8d6f.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-size: 100vw 100vh;
+    background-position: top center;
+}
+header > .home > .container >*{
+    margin: 2rem 0 ;
+}
+header > .home h2{
+    font-size: 2rem;
+}
+header > .home h3{
+    font-size: 4em;
+    
+}
+header > .home span.blink{
+    animation: blink 0.5s infinite ;
+}
+header > .home button{
+    font-size: 1.5rem;
+    border-radius: 40px;
+    border:2px solid #fff;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+header > .home button:hover{
+    background-color: #fff;
+    color: #222;
+}
+header> .home >i{
+    position: absolute;
+    bottom: 40px;
+    font-size: 3rem;
+}
+header > .home video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+/*main*/
+main{
+    padding-bottom: 50px;
+}
+main > section{
+    width: 50%;
+    margin: 30px auto;
+}
+main > section  *{
+    margin: 7px 0;
+}
+section > .title{
+    margin: 30px 0;
+}
+section > .title > h4{
+    color: #f00;
+    font-size: 3rem;
+}
+section > .title > h2{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+/*about*/
+.about img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.about .right > h3{
+    font-size: 3rem;
+}
+.about .sns i{
+    font-size: 2rem;
+    margin: 3px;
+}
+/*features*/
+.features  i{
+    font-size: 1.5rem;
+    color: rgb(248, 3, 3);
+}
+.features p{
+    font-size: 1.3rem;
+    color: rgb(25, 189, 137);
+    word-break: break-all;
+}
+.card{
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.card:hover {
+    background-color: rgb(224, 156, 153);
+    transform: scale(1.1);
+    
+}
+.card:hover {
+    color: #06bdff;
+}
+.card:hover p{
+    color: #eeff03;
+}
+/*portfolio*/
+
+.portfolio .card{
+    border: 1px solid#888;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.portfolio .card img{
+    width: 100%;
+}
+.portfolio .card:hover{
+    background-color: rgb(181, 234, 244);
+    transform: scale(1.1);
+    
+}
+.portfolio .card:hover p{
+    color: #ff0000;
+}
+.portfolio .card h3{
+    color: rgb(3, 3, 1);
+    font-size:1.5rem;
+}
+.portfolio .card p{
+    font-size: 2.5rem;
+}
+
+
+/*background fixed*/
+.bg{
+    
+    height: 80vh;
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*contact*/
+.contact .card{
+    border:1px solid #888;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+.contact .card .icon{
+    font-size: 2rem;
+    margin: 1.5rem;
+}
+.left .card:hover {
+    background-color: chartreuse;
+    
+}
+.left .card:hover i {
+    color: #f00;
+}
+.left .card:hover strong {
+    color: rgb(101, 32, 108);
+    font-size: 2rem;
+}
+.left .card:hover .text p {
+    color: rgb(108, 104, 32);
+    font-size: 1.3rem;
+}
+.contact .text strong{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.contact form{
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.contact form input,
+.contact form textarea{
+    width: 100%;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding:7px
+}
+.contact form textarea{
+    height: 200px;
+    resize: none;
+}
+.contact form input:focus,
+.contact form textarea:focus{
+    box-shadow: 0 0 10px rgb(42, 162, 237);
+    outline: none;
+}
+.contact form button{
+    width: 100%;
+    background-color: rgb(141, 131, 169);
+    border: none;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 20%;
+}
+/*메일 보내기 확인 후 팝업**/
+.contact .right .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+.thankyou_message p.close{
+    background-color: rgb(141, 131, 169);
+    border: none;
+    border-radius: 10%;
+    padding: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* animation */
+@keyframes blink{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+
+/* 미디어 쿼리 작성*/
+/* 기본 레이아웃은 모바일을 기준으로 함*/
+/*태블릿*/
+@media all and (min-width: 768px){
+    html{
+        font-size: 12px;
+    }
+    main > section{
+        max-width: 600px;
+        margin: 50px auto;
+        width: 100%;
+    }
+    .features > .detail,
+    .portfolio > .detail{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .features > .detail .card,
+    .portfolio > .detail .card{
+        width: 45%;
+    }
+}
+/*pc형*/
+@media all and (min-width:1024px){
+    html{
+        font-size: 14px;
+    }
+    
+    main > section{
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    section>.detail{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    .about > .detail >img{
+        width: 50%;
+    }
+    .features > .detail >.card,
+    .portfolio>.detail>.card{
+        width: 30%;
+    }
+    .contact> .detail>.left{
+        width: 35%;
+    }
+    .contact>.detail>.right{
+        width: 60%;
+    }
+}
