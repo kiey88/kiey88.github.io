@@ -35,6 +35,7 @@ const onEventWheel=(event)=>{
     window.scrollTo({left:0,top:topPos,behavior:"smooth"});
 }
 const mobileCurrentCard = (index)=>{
+    
     if(index==1){
         //왼쪽에 있는 버튼
         currentCard--;
@@ -60,7 +61,7 @@ const pcCurrentCard = (index)=>{
     currentPos+=(posFlag*100);
     if(currentPos>0){currentPos=0;}
         else if( currentPos<-1200){currentPos=-1200}
-        elemCardList.style.transform = `translateX(${currentPos}px)`;
+    elemCardList.style.transform = `translateX(${currentPos}px)`;
 }
 
 const onEventPortBtn= (event) => {
@@ -73,19 +74,19 @@ const onEventPortBtn= (event) => {
         //mobile,table 레이아웃
         mobileCurrentCard(event.target.dataset.index)
     }
-    if(event.target.dataset.index==1){
-        //왼쪽에 있는 버튼
-        currentCard--;
-        if(currentCard<=0){currentCard=0}
-        console.log("left")
-    }else{
-        //오른쪽에 있는 버튼
-        currentCard++;
-        if(currentCard >= elemPortCard.length-1){
-            currentCard = elemPortCard.length-1;
-        }
-        console.log("right")
-    }
+    // if(event.target.dataset.index==1){
+    //     //왼쪽에 있는 버튼
+    //     // currentCard--;
+    //     if(currentCard<=0){currentCard=0}
+    //     console.log("left")
+    // }else{
+    //     //오른쪽에 있는 버튼
+    //     // currentCard++;
+    //     if(currentCard >= elemPortCard.length-1){
+    //         currentCard = elemPortCard.length-1;
+    //     }
+    //     console.log("right")
+    // }
     
     const obj=document.querySelector('.card.on')
     obj.classList.remove('on');
