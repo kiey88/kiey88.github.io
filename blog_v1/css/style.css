@@ -306,9 +306,7 @@ section > .title > h2{
 /*태블릿*/
 @media all and (max-width: 767px){
     nav> .gnb > li{
-        
         font-size: 1.5rem;
-        
     }
 }
 @media all and (min-width: 768px){
