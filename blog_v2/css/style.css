@@ -22,43 +22,56 @@ html{
     overflow-x: hidden;
 }
 
-body{
-    
+body{    
     height: 500vh;
     min-width: 320px;
+    /* width: 100%; */
 }
 html,button{
     font-size: 10px;
     font-family: 'Caveat', cursive;
+    
 }
 
 nav{
     display: flex;
+    
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 3rem;
     color: #ff0101;
     
     z-index: 10;
 
 }
+nav>i{
+    
+}
+.on{
+    display: block !important;
+}
 .logo{
     cursor: pointer;
     padding: 0;
+    width: 100px;
 }
 .logoimg{
     width: 75px;
 }
 nav> .gnb{
-    display: flex;
+    position: fixed;
+    display: none;
+    top: 100px;
+    right: 0;
+
 }
 nav> .gnb > li{
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     cursor: pointer;
 }
 header > .home{
@@ -173,8 +186,8 @@ main > .wrapper> section  *{
     z-index: 5;
 }
 .features p{
-    font-size: 2rem;
-    color: rgb(25, 189, 137);
+    font-size: 1.3rem;
+    color: rgb(32, 40, 10);
     word-break: break-all;
     z-index: 7;
     position: relative;
@@ -383,13 +396,33 @@ main > .wrapper> section  *{
 /* 미디어 쿼리 작성*/
 /* 기본 레이아웃은 모바일을 기준으로 함*/
 /*모바일*/
-@media all and(min-width: 320px){
-    
-}
+
 /*태블릿*/
 @media all and (min-width: 768px){
     html{
         font-size: 12px;
+    }
+    nav{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem 1rem;
+        color: #ff0101;
+        z-index: 10;
+    
+    }
+    a>i{
+        display: none !important;
+        
+    }
+    nav> .gnb{
+        display: flex !important;
+        position: relative;
+        top: 0;
     }
     nav> .gnb > li{
         padding: 10px;
@@ -423,6 +456,26 @@ main > .wrapper> section  *{
 @media all and (min-width:1024px){
     html{
         font-size: 14px;
+    }
+    nav{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem 1rem;
+        color: #ff0101;
+        z-index: 10;
+    }
+    a>i{
+        display: none !important;
+    }
+    nav> .gnb{
+        display: flex !important;
+        position: relative;
+        top: 0;
     }
     nav> .gnb > li{
         padding: 10px;

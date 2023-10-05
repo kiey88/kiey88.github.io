@@ -1,8 +1,10 @@
 //객체 선언
 const elemMenuList = document.querySelectorAll('nav>ul>li>a');
+const elemGridText = document.querySelectorAll('.rotate')
 const elemMenuIcon = document.querySelector('.menu-icon');
 const elemSection  = document.querySelectorAll('main>section')
 const elemMain     = document.querySelector('main')
+console.log(elemGridText);
 //메뉴별 section이 보여지도록
 const viewSection = (obj) => {
     // console.log(obj.id);
@@ -35,6 +37,9 @@ const intit =()=>{
     elemMenuList.forEach((value)=>{
         value.addEventListener('click',onClickMenu);
     });
+    elemGridText.forEach((value)=>{
+        value.addEventListener('click',onClickMenu);
+    })
     elemMenuIcon.addEventListener('click',onClickMenu)
 }
 

@@ -1,4 +1,6 @@
 let elemNav = document.querySelector('nav');
+const elemIcon = document.querySelector('nav>a>i');
+const elemMenu = document.querySelector('.gnb');
 const onEventScroll = () =>{
     const scrollTop = document.documentElement.scrollTop
     if( scrollTop >= 100){
@@ -8,4 +10,9 @@ const onEventScroll = () =>{
         elemNav.style.background = 'none';
     }
 }
-window.addEventListener('scroll',onEventScroll)
+const menuView=()=>{
+    console.log("click");
+    elemMenu.classList.toggle('on');
+}
+window.addEventListener('scroll',onEventScroll);
+elemIcon.addEventListener('click',menuView);
