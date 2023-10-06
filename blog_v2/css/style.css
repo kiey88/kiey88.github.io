@@ -48,9 +48,7 @@ nav{
     z-index: 10;
 
 }
-nav>i{
-    
-}
+
 .on{
     display: block !important;
 }
@@ -240,13 +238,14 @@ main > .wrapper> section  *{
     color: #222;
     cursor: pointer;
     position: relative;
-    top: 100px;
+    top: 300px;
 }
 .portfolio .moveBtn i:nth-child(1){
-    left: -20px;
+    left: 90px;
+    
 }
 .portfolio .moveBtn i:nth-child(2){
-    left: 310px;
+    left: 150px;
 }
 .portfolio .cardlist{
     display: block;
@@ -455,6 +454,12 @@ main > .wrapper> section  *{
         cursor: pointer;
         position: relative;
         top: 100px;
+    }
+    .portfolio .moveBtn i:nth-child(1){
+        left: -100px;
+    }
+    .portfolio .moveBtn i:nth-child(2){
+        left: 350px;
     }
 }
 /*pc형*/
