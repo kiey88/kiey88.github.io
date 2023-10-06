@@ -223,9 +223,7 @@ main > .wrapper> section  *{
     transform: scale(0);
     opacity: 0;
 }
-/* .card:hover p{
-    color: #eeff03;
-} */
+
 /*portfolio*/
 .portfolio{
     padding: 50px;
@@ -234,21 +232,21 @@ main > .wrapper> section  *{
 }
 .portfolio .detail{
     position: absolute;
-    width: 80%;
-    margin: 0 50px;
+    width: 70%;
+    margin: 0 30px;
 }
 .portfolio .moveBtn i{
-    font-size: 50px;    
+    font-size: 30px;    
     color: #222;
     cursor: pointer;
     position: relative;
     top: 100px;
 }
 .portfolio .moveBtn i:nth-child(1){
-    left: -50px;
+    left: -20px;
 }
 .portfolio .moveBtn i:nth-child(2){
-    left: 330px;
+    left: 310px;
 }
 .portfolio .cardlist{
     display: block;
@@ -451,6 +449,13 @@ main > .wrapper> section  *{
         padding: 20px 150px;
     }
 
+    .portfolio .moveBtn i{
+        font-size: 50px;    
+        color: #222;
+        cursor: pointer;
+        position: relative;
+        top: 100px;
+    }
 }
 /*pc형*/
 @media all and (min-width:1024px){
@@ -530,6 +535,13 @@ main > .wrapper> section  *{
         position: relative;
         margin: 0 200px;
         transition: 0.5s;
+    }
+    .portfolio .moveBtn i{
+        font-size: 50px;    
+        color: #222;
+        cursor: pointer;
+        position: relative;
+        top: 100px;
     }
 
     .portfolio .moveBtn i:nth-child(1){
