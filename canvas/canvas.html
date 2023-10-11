@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 광고</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            height: 1000vh;
+            color: blanchedalmond;
+        }
+        body.before-load{
+            overflow-y: hidden;
+        }
+        .scroll-img{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+            font-size: 8rem;
+        }
+        .sticky{
+            width: 100%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 5rem;
+            text-align: center;
+        }
+        .sticky>p{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body class="before-load">
+    <h1>안녕??반가워</h1>
+    <canvas class="scroll-img" width="1920" height="1080"></canvas>
+    <div class="sticky">
+        <p class="mag-1">배고프지?</p>
+        <p class="mag-2">오동통새우살!!</p>
+        <p class="mag-3">새우먹자!!</p>
+    </div>
+    <script>
+        const canvas = document.querySelector('.scroll-img');
+        const context = canvas.getContext('2d');
+        const elemMsg = document.querySelectorAll('.sticky>p');
+        
+        const TOTAL_IMG = 675;
+        const videoImg = [];
+        const calcPartRate = (rate,part,flag)=>{
+            return (rate-part)*(flag)*10;
+        }
+        const setImages =() =>{
+            for(let i=1 ; i<=TOTAL_IMG; i++){
+                let elemImg = new Image();
+                elemImg.src = `./image/seq2/${i}.jpg`;
+                videoImg.push(elemImg);
+            }
+            }
+        
+            const msgAnimation = (rate)=>{
+            let value = 0;
+            if(rate >= 0.2&& rate<0.3){
+                
+                elemMsg[0].style.opacity =calcPartRate(rate,0.2,1);
+            }else if(rate >= 0.3&& rate<0.4){
+                
+                elemMsg[0].style.opacity =calcPartRate(rate,0.4,-1);
+            }else{
+                elemMsg[0].style.opacity = '0';
+            }
+            
+            if(rate >= 0.4&& rate<0.5){
+                elemMsg[1].style.opacity =calcPartRate(rate,0.4,1);
+            }else if(rate >= 0.5&& rate<0.6){
+                elemMsg[1].style.opacity =calcPartRate(rate,0.6,-1);
+            }else{
+                elemMsg[1].style.opacity = '0';
+            }
+            
+            if(rate >= 0.6&& rate<0.7){
+                elemMsg[2].style.opacity =calcPartRate(rate,0.6,1);
+            }else if(rate >= 0.7&& rate<0.8){
+                elemMsg[2].style.opacity =calcPartRate(rate,0.8,-1);
+            }else{
+                elemMsg[2].style.opacity = '0';
+            }
+        }
+        
+        const loop =()=>{
+            const {scrollHeight,clientHeight,scrollTop}=document.documentElement;
+            const rate = scrollTop/(scrollHeight-clientHeight);
+            let currentImg = Math.round((TOTAL_IMG-1)*rate);
+            context.drawImage(videoImg[currentImg],0,0);
+            msgAnimation(rate);
+            requestAnimationFrame(loop);
+        }
+        const init =()=>{
+            document.body.classList.remove('before-load');
+            context.drawImage(videoImg[0],0,0);
+            loop();
+        }
+        setImages();
+        window.addEventListener('load',init);
+    </script>
+</body>
+</html>

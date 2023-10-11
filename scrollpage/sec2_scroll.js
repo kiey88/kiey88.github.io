@@ -6,7 +6,7 @@ let posLeft = 0;
 let posTop = 0;
 //가로 스크롤 종료 기준 위치 정하기
 // const MAX_LEFT_POS = (elemSlider.scrollWidth - (document.documentElement.clientWidth*0.7))*-1;
-const MAX_LEFT_POS = (elemSlider.offsetWidth - (window.innerWidth*0.7))*-1;
+let MAX_LEFT_POS = 0;
 
 //함수정의
 const progressBar = () => {
@@ -49,5 +49,11 @@ const onEventSection2 = (event) => {
         elemSec2.style.top = '100%';
     }
 }
+const resize = ()=>{
+    MAX_LEFT_POS = (elemSlider.offsetWidth - (window.innerWidth*0.7))*-1;
+    progressBar();
+}
 //이벤트 등록
 elemSec2.addEventListener('wheel',onEventSection2,{passive:false});
+window.addEventListener('resize',resize);
+resize();
