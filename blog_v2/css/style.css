@@ -343,7 +343,7 @@ main > .wrapper> section  *{
     padding:7px
 }
 .contact form textarea{
-    height: 140px;
+    height: 110px;
     resize: none;
 }
 .contact form input:focus,
