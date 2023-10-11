@@ -140,10 +140,7 @@ main > section{
     align-items: center;
 }
 main > section > .wrapper{
-    
-    width: 70%;
-    
-    
+    width: 98%;
 }
 main > .wrapper> section  *{
     margin: 7px 0;
@@ -163,7 +160,7 @@ main > .wrapper> section  *{
 /*about*/
 .about img{
     width: 220px;
-    height: 25rem;
+    height: 30rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -198,6 +195,7 @@ main > .wrapper> section  *{
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 .features .card.in *{
     color: #fff;
@@ -333,7 +331,7 @@ main > .wrapper> section  *{
     border: 1px solid #fff;
     border-radius: 3px;
     padding: 10px;
-    
+    height: 42vh;
     position: relative;
 }
 
@@ -345,7 +343,7 @@ main > .wrapper> section  *{
     padding:7px
 }
 .contact form textarea{
-    height: 200px;
+    height: 140px;
     resize: none;
 }
 .contact form input:focus,
@@ -473,6 +471,17 @@ main > .wrapper> section  *{
     .portfolio .moveBtn i:nth-child(2){
         left: 350px;
     }
+    .contact form{
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 10px;
+        position: relative;
+    }
+    .contact form textarea{
+        height: 200px;
+        resize: none;
+    }
 }
 /*pc형*/
 @media all and (min-width:1024px){
@@ -576,5 +585,16 @@ main > .wrapper> section  *{
     .portfolio .moveBtn i:nth-child(2){
         left: 1080px;
     }
-    
+    .contact form{
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 10px;
+        height: 45vh;
+        position: relative;
+    }
+    .contact form textarea{
+        height: 200px;
+        resize: none;
+    }
 }
