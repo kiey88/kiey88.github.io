@@ -23,7 +23,7 @@ html{
 }
 
 body{    
-    height: 580vh;
+    height: 600vh;
     min-width: 320px;
     /* width: 100%; */
 }
@@ -399,6 +399,10 @@ main > .wrapper> section  *{
     html{
         font-size: 12px;
     }
+    body{    
+        height: 500vh;
+        min-width: 320px;
+    }
     nav{
         display: flex;
         position: fixed;
@@ -466,6 +470,10 @@ main > .wrapper> section  *{
 @media all and (min-width:1024px){
     html{
         font-size: 14px;
+    }
+    body{    
+        height: 500vh;
+        min-width: 320px;
     }
     nav{
         display: flex;
