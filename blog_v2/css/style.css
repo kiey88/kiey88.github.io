@@ -162,8 +162,8 @@ main > .wrapper> section  *{
 
 /*about*/
 .about img{
-    width: 70%;
-    height: 40rem;
+    width: 220px;
+    height: 25rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -452,6 +452,10 @@ main > .wrapper> section  *{
     .about>.detail{
         padding: auto 20px;
     }
+    .about  .detail >img{
+        width: 40%;
+        height: 30rem;
+    }
     .portfolio{
         padding: 20px 150px;
     }
@@ -521,7 +525,8 @@ main > .wrapper> section  *{
     }
     
     .about  .detail >img{
-        width: 50%;
+        width: 40%;
+        height: 40rem;
     }
     .features  .detail >.card{
         width: 30%;
