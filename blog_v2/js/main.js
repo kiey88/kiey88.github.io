@@ -60,7 +60,7 @@ const pcCurrentCard = (index)=>{
     }
     currentPos+=(posFlag*100);
     if(currentPos>0){currentPos=0;}
-        else if( currentPos<-1200){currentPos=-1200}
+        else if( currentPos<-1400){currentPos=-1400}
     elemCardList.style.transform = `translateX(${currentPos}px)`;
 }
 
