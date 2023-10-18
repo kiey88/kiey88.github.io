@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웨일온</title>
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+        body{
+            background-size: cover;
+        }
+        #clock{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size:5rem;
+            color: aliceblue;
+        }
+        h2{
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+        }
+        .loginName{
+            display: none;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+        }
+        .loginName>button{
+            position: relative;
+            
+            outline: none;
+            border: 1px solid #000;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        .loginName>button>i{
+            
+            padding: 5px;
+            width: 100px;
+            font-size: 20px;
+            background-color: transparent;
+            text-align: center;
+            
+        }
+        #loginForm,.loginName{
+            position: absolute;
+            width: 20%;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 10px auto;
+        }
+        #loginForm{
+            display: flex;
+        }
+        #loginForm>label{
+            padding: 5px;
+            width: 10%;
+            background-color: #e9e7e7;
+            text-align: center;
+            border-radius: 5px 0 0 5px;
+        }
+        #loginForm>input{
+            width: 90%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 0 5px 5px 0;
+            background-color: #e9e7e7;
+        }
+        .todo{
+            position: absolute;
+            right: 20px;
+            bottom: 15%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.5);
+            text-align: center;
+            display: none;
+        }
+        .todo > ul{
+            text-align: left;
+        }
+        .todo > button{
+            display: block;
+        }
+        .cls-view{
+            display: block;
+        }
+        .weather{
+            width: 100px;
+            display: flex;
+            position: absolute;
+            bottom: 30px;
+            right: 320px;
+        }
+        .weather > p{
+            margin: 10px;
+            color: #fff;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p class="loginName"></p>
+    <form id="loginForm">
+        <label><i class="fa-solid fa-right-to-bracket fa-beat-fade" style="color: #07567e;"></i></label>
+        <input type="text" placeholder="로그인 이름을 입력하세요">
+    </form>
+    <div id="clock"></div>
+    <h2>할일목록</h2>
+    <div class="todo">
+        <form id="todoForm">
+            <input type="text" placeholder="할일을 입력하세요">
+        </form>
+        <ul class="todoUl"></ul>
+        <button>닫기</button>
+    </div>
+    <div class="weather">
+        <p class="city"></p>
+        <p class="temperature"></p>
+    </div>
+    <script src="./background.js"></script>
+    <script src="./todos.js"></script>
+    <script src="./clock.js"></script>
+    <script src="./login.js"></script>
+    <script src="./weather.js"></script>
+</body>
+</html>
